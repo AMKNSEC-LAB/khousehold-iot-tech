@@ -3,17 +3,15 @@ import { renderer } from './renderer'
 import {
   SiteHeader,
   Hero,
-  ImageBand,
-  LivingLab,
+  ModelDiagram,
   Vision,
-  Experiments,
-  Programs,
-  Methods,
-  Outcomes,
-  Roadmap,
-  Contact,
+  Agenda,
+  CurrentStudy,
+  MethodsSection,
+  Outputs,
+  RoadmapSection,
+  Collaboration,
   SiteFooter,
-  Toast,
 } from './components'
 
 const app = new Hono()
@@ -29,18 +27,16 @@ app.get('/', (c) => {
       <SiteHeader />
       <main id="main">
         <Hero />
-        <ImageBand />
-        <LivingLab />
+        <ModelDiagram />
         <Vision />
-        <Experiments />
-        <Programs />
-        <Methods />
-        <Outcomes />
-        <Roadmap />
-        <Contact />
+        <Agenda />
+        <CurrentStudy />
+        <MethodsSection />
+        <Outputs />
+        <RoadmapSection />
+        <Collaboration />
       </main>
       <SiteFooter />
-      <Toast />
     </>
   )
 })

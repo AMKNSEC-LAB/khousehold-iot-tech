@@ -54,22 +54,22 @@ export const Hero: FC = () => (
         <div>
           <p class="khh-hero-kicker">Privacy-aware sensing for everyday life</p>
           <h1 class="khh-hero-title">
-            <span>더 많이 보는 것이 아니라,</span>
-            <span class="khh-hero-accent">필요한 만큼만 이해합니다.</span>
+            <span>카메라 없이도, 가구가</span>
+            <span class="khh-hero-accent">사람을 알아봅니다.</span>
           </h1>
           <p class="khh-hero-deck">
-            KHouseHold는 비영상 센서로 생활공간 속 사람과 움직임을 이해하되, 원시 데이터는 줄이고 필요한 상태만
-            남기는 방법을 연구합니다.
+            KHouseHold는 소파 같은 가구 안에 작은 센서를 넣어, 사람이 어디에 있고 어떻게 움직이는지 알아내는
+            기술을 연구합니다. 영상은 찍지 않습니다. 꼭 필요한 정보만 남기고 나머지는 그 자리에서 지웁니다.
           </p>
         </div>
         <aside class="khh-hero-note">
           <span>Current focus</span>
           <strong>
-            ToF·IMU 정합과
+            지금은 두 센서의 기준을
             <br />
-            사람 추적 베이스라인
+            정확히 맞추는 단계입니다
           </strong>
-          <p>VL53L5CX + BNO08X · 진행 중</p>
+          <p>거리 센서 + 움직임 센서 · 진행 중</p>
           <em>rev.03 · 42.3°C · edge ● online</em>
         </aside>
       </div>
@@ -77,11 +77,11 @@ export const Hero: FC = () => (
       <figure
         class="khh-research-figure"
         role="img"
-        aria-label="원시 거리와 자세 신호를 시간·좌표 기준으로 정합하고, 필요한 상태만 남기는 모델"
+        aria-label="센서 신호가 네 단계를 거쳐 '있다/움직인다/없다'라는 최소한의 결과로 바뀌는 과정"
       >
         <figcaption>
-          <span>Figure 01 · Signal-to-state research model</span>
-          <span>raw signal → minimal, usable state</span>
+          <span>Figure 01 · 신호가 결과가 되기까지</span>
+          <span>센서 신호 → 꼭 필요한 결과만</span>
         </figcaption>
         <div class="khh-model-flow">
           {FLOW_STAGES.map((s, i) => (
@@ -102,10 +102,10 @@ export const Hero: FC = () => (
         </div>
         <div class="khh-privacy-boundary">
           <span>
-            <b>EDGE ● ONLINE</b> · raw signal stays local
+            <b>EDGE ● ONLINE</b> · 원본 신호는 가구 밖으로 나가지 않음
           </span>
-          <strong>데이터는 줄이고, 해석은 필요한 만큼만 남깁니다.</strong>
-          <span>Output · minimal state</span>
+          <strong>원본 데이터는 가구 안에서 지워지고, 밖으로는 결과만 나갑니다.</strong>
+          <span>밖으로 나가는 것 · 결과뿐</span>
         </div>
       </figure>
     </div>
@@ -171,13 +171,13 @@ export const LivingLab: FC = () => (
       <header class="khh-section-head">
         <span class="khh-overline">08 — 리빙 랩 / Living lab</span>
         <h2 class="khh-section-title" id="livinglab-title">
-          가구 위에서, 사람 없이
+          첫 실험 무대는
           <br />
-          사람을 이해합니다.
+          진짜 소파입니다.
         </h2>
         <p class="khh-section-lead">
-          KENZY 실리콘가죽 소파를 첫 번째 <b>리빙 랩</b>으로 삼습니다. 카메라 없이 소파의 좌면·등받이·측면에 배치된
-          저해상 신호만으로 존재·머무름·이동을 최소한만 기록합니다.
+          실험실 장비가 아니라, 실제로 판매되는 <b>KENZY 소파</b>에 센서를 넣었습니다. 소파는 카메라 없이
+          &ldquo;누가 앉아 있는지, 얼마나 머물렀는지, 자리를 옮겼는지&rdquo; 딱 세 가지만 기록합니다.
         </p>
       </header>
 
@@ -201,10 +201,10 @@ export const LivingLab: FC = () => (
         <div class="khh-lab-copy">
           <article class="khh-lab-callout">
             <span>Case 01</span>
-            <h3>3개 좌면을 3개 존으로.</h3>
+            <h3>자리마다 하나씩, 3개의 감지 구역.</h3>
             <p>
-              소파 모듈마다 하나의 존이 대응합니다. 각 존은 <b>비어있음 · 앉아있음 · 오래 머무름</b> 세 상태만
-              남기고, 원시 거리 데이터는 소파 안쪽 모듈에서만 처리한 뒤 폐기됩니다.
+              소파의 세 자리에 각각 감지 구역을 하나씩 두었습니다. 각 구역이 기억하는 것은 <b>비어있음 · 앉아있음
+              · 오래 머무름</b> 세 가지뿐입니다. 센서가 잰 원본 데이터는 소파 안에서 처리된 뒤 바로 지워집니다.
             </p>
             <dl class="khh-lab-facts">
               <div>
@@ -228,19 +228,19 @@ export const LivingLab: FC = () => (
               <li>
                 <span class="dot dot--live"></span>
                 <span>
-                  <b>Live zone</b> · 사람 감지, 상태 라벨링 중
+                  <b>초록 구역</b> · 지금 사람이 앉아 있는 자리
                 </span>
               </li>
               <li>
                 <span class="dot dot--idle"></span>
                 <span>
-                  <b>Empty zone</b> · 마지막 감지 시각 표시
+                  <b>점선 구역</b> · 비어 있는 자리 (마지막 감지 시각만 표시)
                 </span>
               </li>
               <li>
                 <span class="dot dot--path"></span>
                 <span>
-                  <b>Track path</b> · 최근 이동 궤적 (state만 보관)
+                  <b>주황 점선</b> · 사람이 방금 이동한 경로
                 </span>
               </li>
             </ul>
@@ -268,8 +268,9 @@ export const LivingLab: FC = () => (
         <div>
           <span class="khh-overline">Field notes</span>
           <p>
-            리빙 랩에서 얻은 신호는 KENZY 자체 품질 개선(좌면 마모, 사용 시간)에 사용될 수 있고, 동일 프로토콜을
-            다른 KHouseHold 가구 라인으로 확장하는 기준이 됩니다. <em>원시 이미지는 저장되지 않습니다.</em>
+            이 소파가 모은 데이터는 두 가지에 쓰입니다. 하나는 KENZY 자체를 더 좋게 만드는 것 — 어느 자리가 얼마나
+            쓰이는지 알면 쿠션 내구성을 실제 사용에 맞게 설계할 수 있습니다. 다른 하나는 같은 방식을 다른 가구로
+            넓히는 기준이 되는 것입니다. <em>어떤 경우에도 영상은 찍지도, 저장하지도 않습니다.</em>
           </p>
         </div>
         <ul class="khh-lab-stats">
@@ -295,19 +296,20 @@ export const LivingLab: FC = () => (
 export const Vision: FC = () => (
   <Section id="vision" tone="white" labelledBy="vision-title">
     <SectionHead overline="01 — 연구 비전 / Research vision" titleId="vision-title">
-      측정 정확도와 데이터 책임성을
+      정확하게 재는 것과
       <br />
-      하나의 연구 문제로 봅니다.
+      안전하게 다루는 것, 둘 다입니다.
     </SectionHead>
     <div class="khh-vision-grid">
       <div>
         <blockquote class="khh-vision-quote">
-          공간에서 얻은 신호가 사람에 대한 이해로 이어지되, <em>개인의 존엄과 데이터의 안전</em>은 처음부터
-          설계되어야 합니다.
+          가구가 사람을 이해하게 만들되, <em>사생활과 데이터의 안전</em>은 나중에 덧붙이는 게 아니라 처음부터
+          설계에 넣어야 한다고 믿습니다.
         </blockquote>
         <p class="khh-vision-body">
-          KHouseHold는 센서 하나의 성능을 보여주는 데 머물지 않습니다. 신호의 수집과 정합, 사람 상태의 해석,
-          프라이버시 보호, 공간 서비스로의 번역을 하나의 연속된 연구 체계로 다룹니다.
+          그래서 KHouseHold는 센서 성능만 연구하지 않습니다. 신호를 모으는 방법, 사람의 상태를 읽어내는 방법,
+          개인정보를 지키는 방법, 그리고 이것을 실제 생활 서비스로 만드는 방법까지 — 처음부터 끝까지 하나로 이어서
+          연구합니다.
         </p>
       </div>
       <ol class="khh-principles">
@@ -332,22 +334,21 @@ export const Experiments: FC = () => (
       <SectionHead
         overline="02 — 현재 실험 / Current work"
         titleId="experiments-title"
-        lead="VL53L5CX의 멀티존 거리 분포와 BNO08X의 자세 정보를 같은 시간·공간 좌표에서 해석할 수 있어야, 이후 사람 추적과 상태 이해도 신뢰할 수 있습니다."
+        lead="소파에는 거리를 재는 센서와 기울기를 재는 센서, 두 종류가 들어갑니다. 이 둘은 박자도 기준도 서로 다릅니다. 둘을 정확히 맞춰야 '사람이 저기 있다'는 판단도 믿을 수 있습니다."
       >
         지금 가장 중요한 일은
-        <br />
-        서로 다른 센서의 기준을 맞추는 것입니다.
+        <br />두 센서의 눈높이를 맞추는 것입니다.
       </SectionHead>
       <Badge variant="current">현재 실험</Badge>
     </div>
     <div class="khh-focus-grid">
       <aside class="khh-focus-question">
-        <span>Current research question</span>
+        <span>지금 풀고 있는 질문</span>
         <blockquote>
-          센서가 기울거나 이동하고 측정 주기가 다를 때도, 거리 변화가 실제 사람의 움직임인지 일관되게 구분할 수
-          있는가?
+          센서가 기울어지거나 흔들려도, &ldquo;지금 저 거리 변화는 사람이 움직인 것이다&rdquo;라고 매번 똑같이
+          판단할 수 있을까?
         </blockquote>
-        <p>현재 단계에서는 특정 정확도나 임상적 효용을 확정하지 않습니다. 정량 성능은 조건별 평가가 축적된 뒤 공개합니다.</p>
+        <p>아직 &ldquo;정확도 몇 %&rdquo;라고 말하지 않습니다. 여러 조건에서 충분히 시험한 뒤, 조건과 함께 숫자를 공개하겠습니다.</p>
       </aside>
       <ol class="khh-work-list">
         {WORK.map((w) => (
@@ -371,10 +372,11 @@ export const Programs: FC = () => (
     <SectionHead
       overline="03 — 연구 프로그램 / Programs"
       titleId="tracks-title"
-      lead="모든 주제를 같은 단계의 성과처럼 나열하지 않고, 현재 기반·해석 확장·책임 있는 적용이라는 세 축으로 구분합니다."
+      lead="어디까지 되어 있고 어디부터가 계획인지 섞이지 않도록, 연구를 '지금 하는 일 · 다음에 시도할 일 · 끝까지 지킬 원칙' 세 갈래로 나눴습니다."
     >
-      여섯 개의 주제를
-      <br />세 개의 연구 프로그램으로 묶습니다.
+      연구는 세 갈래로
+      <br />
+      나뉘어 있습니다.
     </SectionHead>
     <div class="khh-program-list">
       {PROGRAMS.map((p) => (
@@ -407,11 +409,11 @@ export const Methods: FC = () => (
     <SectionHead
       overline="04 — 방법과 기술 / Methods"
       titleId="technology-title"
-      lead="현재 실제로 실험하는 기술, 방법론을 구체화하는 기술, 장기적으로 검토하는 기술이 혼동되지 않도록 구분했습니다."
+      lead="'지금 실제로 쓰는 기술'과 '앞으로 검토할 기술'을 한 표에서 구분해 보여드립니다. 이미 되는 것처럼 보이게 부풀리지 않기 위해서입니다."
     >
-      현재 기술과 확장 기술을
+      지금 쓰는 기술과 검토 중인 기술,
       <br />
-      분리해 제시합니다.
+      한 표로 정리했습니다.
     </SectionHead>
     <div class="khh-tech-table-wrap">
       <table class="khh-tech-table">
@@ -437,7 +439,7 @@ export const Methods: FC = () => (
         </tbody>
       </table>
     </div>
-    <p class="khh-tech-caption">표의 '향후 확장' 항목은 검증된 성과가 아니라 현재 연구 기반 위에서 검토할 방향입니다.</p>
+    <p class="khh-tech-caption">'향후 확장' 칸에 있는 것들은 아직 성과가 아닙니다. 지금 기반이 갖춰지면 다음으로 검토할 후보입니다.</p>
   </Section>
 )
 
@@ -447,11 +449,11 @@ export const Outcomes: FC = () => (
     <SectionHead
       overline="05 — 연구 기반 / Evidence"
       titleId="outcomes-title"
-      lead="완결된 제품이나 확정적 성능 대신, 현재 축적 중인 방법론·프로토타입·평가 자산을 투명하게 제시합니다."
+      lead="완성된 제품을 자랑하는 대신, 지금까지 실제로 만들어 둔 것들을 있는 그대로 보여드립니다."
     >
-      지금의 성과는
+      지금까지
       <br />
-      다음 검증을 가능하게 하는 연구 기반입니다.
+      만들어 둔 것들입니다.
     </SectionHead>
     <div class="khh-outcome-grid">
       {OUTCOMES.map((o) => (
@@ -466,8 +468,8 @@ export const Outcomes: FC = () => (
       ))}
     </div>
     <p class="khh-evidence-rule">
-      <strong>EVIDENCE RULE ·</strong> 성능 수치와 임상적 효용은 검증 시점에 조건과 함께 공개합니다. 연구 기반의
-      축적 상태만 투명하게 제시합니다.
+      <strong>약속 ·</strong> 성능 숫자는 충분히 검증한 뒤에, 어떤 조건에서 잰 것인지와 함께 공개합니다. 그 전에는
+      &ldquo;여기까지 만들었다&rdquo;는 사실만 말씀드립니다.
     </p>
   </Section>
 )
@@ -478,11 +480,11 @@ export const Roadmap: FC = () => (
     <SectionHead
       overline="06 — 확장 경로 / Roadmap"
       titleId="roadmap-title"
-      lead="로드맵은 확정된 제품 일정이 아니라 현재 실험 결과와 검증 수준에 따라 조정되는 연구 확장 경로입니다."
+      lead="확정된 출시 일정이 아니라 연구가 나아가는 순서입니다. 실험 결과에 따라 조정될 수 있습니다."
     >
-      현재, 다음, 장기를
+      지금 → 다음 → 그 다음,
       <br />
-      명확히 나눕니다.
+      이 순서로 갑니다.
     </SectionHead>
     <div class="khh-roadmap-list">
       {ROADMAP.map((r) => (
@@ -506,11 +508,11 @@ export const Contact: FC = () => {
         <div>
           <span class="khh-overline khh-overline--on-dark">07 — 협력 / Collaboration</span>
           <h2 class="khh-contact-title" id="contact-title">
-            생활공간 센싱의 다음 질문을 함께 연구합니다.
+            이 연구, 함께 하실 분을 찾습니다.
           </h2>
           <p class="khh-contact-lead">
-            센서 융합, 사람 중심 AI, 프라이버시 보호, 스마트홈·헬스케어 실증을 함께 탐구할 대학·연구기관·기업
-            파트너를 기다립니다.
+            센서 기술, 사람 중심 AI, 개인정보 보호, 스마트홈·헬스케어 실증 — 어느 주제든 좋습니다. 관심 있는
+            대학·연구기관·기업이라면 부담 없이 연락해 주세요.
           </p>
           <div class="khh-contact-actions">
             <a class="khh-btn khh-btn--primary" href={mailto}>
@@ -521,21 +523,21 @@ export const Contact: FC = () => {
             </button>
           </div>
           <p class="khh-contact-hint">
-            이메일 초안에는 수신자가 지정되어 있지 않습니다. KHouseHold의 공식 연락처를 연결해 사용하세요.
+            버튼을 누르면 문의 양식이 담긴 이메일 초안이 열립니다. 받는 사람 주소만 채워서 보내시면 됩니다.
           </p>
         </div>
         <ul class="khh-contact-list">
           <li>
-            <strong>공동 연구와 실험 설계</strong>
-            <span>센서 비교, 데이터 수집, 알고리즘 평가</span>
+            <strong>함께 실험하기</strong>
+            <span>센서 비교, 데이터 수집, 알고리즘 평가를 같이 설계합니다</span>
           </li>
           <li>
-            <strong>생활환경 실증</strong>
-            <span>스마트홈, 돌봄, 안전, 웰니스 공간</span>
+            <strong>실제 공간에서 검증하기</strong>
+            <span>스마트홈, 돌봄, 안전, 웰니스 공간에 적용해 봅니다</span>
           </li>
           <li>
-            <strong>학생 프로젝트와 교류</strong>
-            <span>임베디드 센싱, 신호처리, 공간 AI</span>
+            <strong>학생 프로젝트로 참여하기</strong>
+            <span>임베디드 센싱, 신호처리, 공간 AI 주제를 열어 둡니다</span>
           </li>
         </ul>
       </div>

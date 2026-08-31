@@ -1,0 +1,147 @@
+/* ==========================================================================
+   KHouseHold Design System — Colors & Typography  (v2 · Warm rebrand)
+   walnut + terracotta + cream · Deep Teal reserved as IoT signal accent.
+   AXOR / Bang & Olufsen mood: premium warm minimalism + brass hairline.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url("/static/fonts/PretendardVariable.woff2") format("woff2-variations");
+}
+
+:root {
+  /* Anchor — Walnut */
+  --khh-walnut-950: #2A1F17;
+  --khh-walnut-900: #3B2A1E;
+  --khh-walnut-800: #4E3826;
+  --khh-walnut-700: #6B4A32;
+
+  /* Primary accent — Terracotta */
+  --khh-clay:      #C86A4A;
+  --khh-clay-deep: #9E4E2F;
+  --khh-clay-soft: #E58F6A;
+  --khh-clay-pale: #F5E4DA;
+  --khh-clay-mist: #F0C9B4;
+
+  /* Secondary accent — Deep Teal (IoT signal, sparingly) */
+  --khh-signal:      #108474;
+  --khh-signal-soft: #4CA294;
+  --khh-signal-pale: #DDECE8;
+
+  /* Metal — brass hairline */
+  --khh-brass:      #B08856;
+  --khh-brass-soft: #C9A87A;
+
+  /* Surfaces */
+  --khh-cream: #F4EEE4;
+  --khh-bone:  #FAF6EE;
+  --khh-tint:  #EFE4D2;
+  --khh-sand:  #E8DDCB;
+
+  /* Ink on cream */
+  --khh-ink:      #2A1F17;
+  --khh-ink-soft: #6B5749;
+  --khh-muted:    #8C7A6B;
+  --khh-muted-2:  #B0A08E;
+
+  /* Ink on walnut */
+  --khh-on-dark-1: #FAF6EE;
+  --khh-on-dark-2: #D9CFC2;
+  --khh-on-dark-3: #B9AC9C;
+  --khh-on-dark-4: #8C7E6E;
+
+  /* Rules & dividers */
+  --khh-line:       #E4DBCC;
+  --khh-line-dark:  #CDBFAB;
+  --khh-line-brass: #B08856;
+  --khh-line-on-dark:      rgba(250,246,238,.28);
+  --khh-line-on-dark-soft: rgba(250,246,238,.13);
+  --khh-line-on-dark-hair: rgba(176,136,86,.55);
+
+  /* Status accents (badge only) */
+  --khh-status-current-fg:  #0E7364;
+  --khh-status-current-bg:  #DDECE8;
+  --khh-status-progress-fg: #3F6478;
+  --khh-status-progress-bg: #DDE6EB;
+  --khh-status-explore-fg:  #9E4E2F;
+  --khh-status-explore-bg:  #F5E4DA;
+  --khh-status-future-fg:   #6B4A6E;
+  --khh-status-future-bg:   #E9DEE9;
+
+  /* Focus / selection */
+  --khh-focus:        var(--khh-clay);
+  --khh-selection-fg: var(--khh-walnut-950);
+  --khh-selection-bg: var(--khh-clay-mist);
+
+  /* Type families */
+  --khh-font-sans:  "Pretendard Variable", Pretendard, -apple-system,
+                    BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  --khh-font-serif: "Noto Serif KR", Batang, "Nanum Myeongjo", serif;
+  --khh-font-mono:  ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* Type scale */
+  --khh-fs-display: clamp(2.9rem, 5.8vw, 5rem);
+  --khh-fs-h1:      clamp(2.1rem, 4.4vw, 3.65rem);
+  --khh-fs-h2:      clamp(1.55rem, 3vw, 2.35rem);
+  --khh-fs-h3:      1.35rem;
+  --khh-fs-h4:      1.14rem;
+  --khh-fs-lead:    1rem;
+  --khh-fs-body:    .95rem;
+  --khh-fs-small:   .84rem;
+  --khh-fs-caption: .73rem;
+  --khh-fs-meta:    .66rem;
+  --khh-fs-micro:   .61rem;
+
+  /* Spacing / layout */
+  --khh-space-11: 104px;
+  --khh-container: 1160px;
+  --khh-reading:   940px;
+  --khh-header-h:  72px;
+
+  /* Radii */
+  --khh-radius-xs: 2px;
+  --khh-radius-sm: 6px;
+  --khh-radius-md: 8px;
+  --khh-radius-lg: 14px;
+
+  /* Motion */
+  --khh-ease:     cubic-bezier(.2,.7,.2,1);
+  --khh-dur-fast: 120ms;
+  --khh-dur-base: 180ms;
+  --khh-dur-slow: 260ms;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--khh-header-h) + 28px);
+}
+
+body {
+  margin: 0;
+  color: var(--khh-ink);
+  background: var(--khh-cream);
+  font-family: var(--khh-font-sans);
+  font-size: var(--khh-fs-body);
+  line-height: 1.72;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { color: var(--khh-selection-fg); background: var(--khh-selection-bg); }
+:focus-visible { outline: 2px solid var(--khh-focus); outline-offset: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -8,6 +8,7 @@
 
 ## URLs
 - **Sandbox Preview**: https://3000-i0v56qvtifnc8kx233dvc-583b4d74.sandbox.novita.ai
+- **GitHub**: https://github.com/AMKNSEC-LAB/khousehold-iot-tech
 - **Production**: 미배포 (배포 방식 선택 대기 — Genspark 호스팅 vs BYOK Cloudflare)
 
 ## 페이지 구조 (단일 페이지, 앵커 내비게이션)
@@ -31,7 +32,7 @@
 - 공식 이메일 미제공 → 연락처 영역은 "공식 연락처 입력 필요" 플레이스홀더
 
 ## Design System
-- **팔레트**: 짙은 남색(#0B1526~#1F3352) · 백색/페이퍼(#FBFCFE) · 청록 포인트 1색(#0F7C6F)
+- **팔레트**: 월넛(#2A1F17~#6B4A32) · 크림/본(#F4EEE4/#FAF6EE) · 테라코타(#C86A4A) · 청록 시그널(#108474)
 - **타이포**: Pretendard Variable (로컬 woff2) 본문 + Noto Serif KR 제목
 - **스타일**: 넓은 여백, 명확한 제목 위계, 장식 최소화 (그라디언트·빛나는 효과 없음)
 - **접근성**: 시맨틱 HTML, skip link, 키보드 포커스 링, `prefers-reduced-motion`, 표 스크롤 영역 `tabindex`, `word-break: keep-all`

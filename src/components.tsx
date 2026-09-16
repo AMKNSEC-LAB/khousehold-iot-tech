@@ -102,16 +102,16 @@ export const ImageBand: FC = () => (
   <section class="khh-image-band" aria-label="연구 배경이 되는 생활공간">
     <figure class="khh-image-figure">
       <img
-        src="/static/assets/furniture-living-room.jpg"
-        alt="소파와 원목 가구가 놓인 거실 생활공간"
+        src="/static/assets/kenzy-installed.jpg"
+        alt="KHouseHold가 제작한 모듈형 코너 소파가 실제 공간에 설치된 모습"
         loading="lazy"
         width="1600"
-        height="900"
+        height="1200"
       />
       <figcaption class="khh-image-caption">
         <span class="khh-image-caption-label">Context</span>
-        연구가 향하는 곳은 이런 일상적인 생활공간입니다. 사진은 연구 배경을 보여주는 것으로, 센서가
-        설치된 실증 환경이 아닙니다.
+        KHouseHold가 직접 제작해 실제 공간에 설치한 모듈형 소파입니다. 연구는 이렇게 사람들이 매일
+        사용하는 가구에서 출발합니다. 사진 속 가구에 센서가 설치되어 있다는 뜻은 아닙니다.
       </figcaption>
     </figure>
   </section>
@@ -240,15 +240,16 @@ export const CurrentStudy: FC = () => (
     <figure class="khh-concept-figure">
       <img
         src="/static/assets/sensor-concept-visualization.jpg"
-        alt="거실 소파 옆 선반에 ToF·IMU 센서 모듈 위치를 표시하고, 소파 좌석 방향으로 멀티존 감지 시야를 청록색 격자로 나타낸 연구 개념 시각화"
+        alt="KHouseHold 모듈형 소파 실물 사진 위에 ToF·IMU 센서 배치 위치와 멀티존 감지 시야를 청록색 격자로 나타낸 연구 개념 시각화"
         loading="lazy"
         width="1920"
-        height="1288"
+        height="1434"
       />
       <figcaption class="khh-concept-caption">
         <span class="khh-concept-caption-label">Figure 01 · 연구 개념도</span>
-        생활공간에서 ToF·IMU 센서가 배치될 수 있는 위치와 멀티존 감지 시야를 상상해 본 개념
-        시각화입니다. 실제 설치 사례가 아니며, 감지 구역과 배치는 현재 검증 중인 연구 대상입니다.
+        KHouseHold의 실제 소파 설치 사진 위에, ToF·IMU 센서가 배치될 수 있는 위치와 멀티존 감지
+        시야를 상상해 그린 개념 시각화입니다. 실제 설치 사례가 아니며, 감지 구역과 배치는 현재 검증
+        중인 연구 대상입니다.
       </figcaption>
     </figure>
     <div class="khh-wp-grid">

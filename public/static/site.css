@@ -296,7 +296,7 @@
   height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  object-position: center 62%;
+  object-position: center 68%;
   border-radius: var(--khh-radius);
   border: 1px solid rgba(250, 246, 238, 0.14);
 }

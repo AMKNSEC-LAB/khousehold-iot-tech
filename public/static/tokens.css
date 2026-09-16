@@ -1,5 +1,6 @@
 /* KHouseHold Research — design tokens
-   학술 연구 포트폴리오: 짙은 남색 · 백색 · 청록 포인트 */
+   Warm system 복원: 월넛 · 테라코타 · 크림 + 청록(IoT signal) 포인트
+   (변수명은 새 레이아웃과 호환되도록 유지하고, 값만 warm 팔레트로 매핑) */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&display=swap');
 
@@ -12,30 +13,44 @@
 }
 
 :root {
-  /* Palette — navy / white / one teal accent */
-  --khh-navy-950: #0b1526;
-  --khh-navy-900: #101d33;
-  --khh-navy-800: #16263f;
-  --khh-navy-700: #1f3352;
-  --khh-ink: #16263f;          /* body text on light */
-  --khh-ink-soft: #44536b;     /* secondary text */
-  --khh-ink-faint: #6b7a92;    /* captions / notes */
-  --khh-white: #ffffff;
-  --khh-paper: #fbfcfe;        /* page background */
-  --khh-tint: #f2f5f9;         /* tinted section background */
-  --khh-line: #d9e0e9;         /* hairlines */
-  --khh-line-strong: #b7c2d1;
+  /* Dark surfaces — walnut */
+  --khh-navy-950: #2a1f17;
+  --khh-navy-900: #3b2a1e;
+  --khh-navy-800: #4e3826;
+  --khh-navy-700: #6b4a32;
 
-  /* Single teal accent */
-  --khh-teal: #0f7c6f;
-  --khh-teal-strong: #0b5f56;
-  --khh-teal-tint: #e4f2ef;
+  /* Text on light */
+  --khh-ink: #2a1f17;
+  --khh-ink-soft: #6b5749;
+  --khh-ink-faint: #8c7a6b;
 
-  /* Status (derived, low-saturation) */
-  --khh-explore: #8a6a2f;
-  --khh-explore-tint: #f5efe2;
-  --khh-later: #5b6474;
-  --khh-later-tint: #eceff3;
+  /* Light surfaces — cream / bone */
+  --khh-white: #faf6ee;   /* cards */
+  --khh-paper: #f4eee4;   /* page background */
+  --khh-tint: #efe4d2;    /* tinted section background */
+  --khh-line: #e4dbcc;    /* hairlines */
+  --khh-line-strong: #cdbfab;
+
+  /* Teal — IoT signal accent (연구 '현재' 상태) */
+  --khh-teal: #108474;
+  --khh-teal-strong: #0e7364;
+  --khh-teal-tint: #ddece8;
+
+  /* Terracotta clay — 탐색 상태 */
+  --khh-clay: #c86a4a;
+  --khh-clay-soft: #e58f6a;
+  --khh-explore: #9e4e2f;
+  --khh-explore-tint: #f5e4da;
+
+  /* Muted — 향후 확장 상태 */
+  --khh-later: #8c7a6b;
+  --khh-later-tint: #e8ddcb;
+
+  /* On-dark text (walnut 배경 위) */
+  --khh-on-dark-1: #faf6ee;
+  --khh-on-dark-2: #d9cfc2;
+  --khh-on-dark-3: #b9ac9c;
+  --khh-on-dark-4: #8c7e6e;
 
   /* Type */
   --khh-font-sans: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
@@ -71,8 +86,8 @@ body {
 }
 
 ::selection {
-  background: var(--khh-teal);
-  color: var(--khh-white);
+  background: var(--khh-clay);
+  color: var(--khh-on-dark-1);
 }
 
 a {

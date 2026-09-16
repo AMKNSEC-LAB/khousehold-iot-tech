@@ -57,13 +57,13 @@
 .khh-badge--explore {
   color: var(--khh-explore);
   background: var(--khh-explore-tint);
-  border-color: rgba(138, 106, 47, 0.25);
+  border-color: rgba(158, 78, 47, 0.3);
 }
 
 .khh-badge--later {
   color: var(--khh-later);
   background: var(--khh-later-tint);
-  border-color: rgba(91, 100, 116, 0.28);
+  border-color: rgba(140, 122, 107, 0.35);
 }
 
 .khh-badge--principle {
@@ -78,7 +78,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(251, 252, 254, 0.94);
+  background: rgba(244, 238, 228, 0.94);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--khh-line);
 }
@@ -212,7 +212,7 @@
   font-size: 12.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #6fbfb4;
+  color: var(--khh-clay-soft);
 }
 
 .khh-hero-title {
@@ -229,7 +229,7 @@
 }
 
 .khh-hero-accent {
-  color: #7fd4c8;
+  color: var(--khh-clay-soft);
 }
 
 .khh-hero-deck {
@@ -237,7 +237,7 @@
   max-width: 560px;
   font-size: 17.5px;
   line-height: 1.78;
-  color: #c3cddc;
+  color: var(--khh-on-dark-2);
 }
 
 .khh-hero-focus {
@@ -253,7 +253,7 @@
   font-weight: 650;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #8fa2bd;
+  color: var(--khh-on-dark-3);
 }
 
 .khh-focus-hardware {
@@ -268,13 +268,64 @@
   margin: 0 0 18px;
   font-size: 14.5px;
   line-height: 1.66;
-  color: #b4c0d2;
+  color: var(--khh-on-dark-2);
 }
 
 .khh-hero-focus .khh-badge--now {
   color: #7fd4c8;
-  background: rgba(15, 124, 111, 0.22);
+  background: rgba(16, 132, 116, 0.25);
   border-color: rgba(127, 212, 200, 0.35);
+}
+
+/* ---------- Image band ---------- */
+
+.khh-image-band {
+  background: var(--khh-navy-950);
+  padding: 0 0 88px;
+}
+
+.khh-image-figure {
+  max-width: var(--khh-container);
+  margin: 0 auto;
+  padding: 0 var(--khh-gutter);
+}
+
+.khh-image-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  border-radius: var(--khh-radius);
+  border: 1px solid rgba(250, 246, 238, 0.14);
+}
+
+.khh-image-caption {
+  margin-top: 14px;
+  font-size: 13.5px;
+  line-height: 1.66;
+  color: var(--khh-on-dark-3);
+  max-width: 640px;
+}
+
+.khh-image-caption-label {
+  display: inline-block;
+  margin-right: 10px;
+  font-family: var(--khh-font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--khh-clay-soft);
+}
+
+@media (max-width: 820px) {
+  .khh-image-band {
+    padding-bottom: 56px;
+  }
+
+  .khh-image-figure img {
+    aspect-ratio: 4 / 3;
+  }
 }
 
 /* ---------- Model diagram ---------- */
@@ -856,7 +907,7 @@
 
 .khh-footer {
   background: var(--khh-navy-950);
-  color: #aebbce;
+  color: var(--khh-on-dark-3);
   padding: 48px 0 52px;
 }
 
@@ -870,7 +921,7 @@
 .khh-footer-line2 {
   margin: 0;
   font-size: 13px;
-  color: #8194ad;
+  color: var(--khh-on-dark-4);
 }
 
 /* ---------- Responsive ---------- */

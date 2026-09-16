@@ -3,6 +3,7 @@ import { renderer } from './renderer'
 import {
   SiteHeader,
   Hero,
+  ImageBand,
   ModelDiagram,
   Vision,
   Agenda,
@@ -27,6 +28,7 @@ app.get('/', (c) => {
       <SiteHeader />
       <main id="main">
         <Hero />
+        <ImageBand />
         <ModelDiagram />
         <Vision />
         <Agenda />

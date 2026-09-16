@@ -96,6 +96,27 @@ export const Hero: FC = () => (
   </section>
 )
 
+/* ---------- Image band (실제 생활공간 사진 1장) ---------- */
+
+export const ImageBand: FC = () => (
+  <section class="khh-image-band" aria-label="연구 배경이 되는 생활공간">
+    <figure class="khh-image-figure">
+      <img
+        src="/static/assets/furniture-living-room.jpg"
+        alt="소파와 원목 가구가 놓인 거실 생활공간"
+        loading="lazy"
+        width="1600"
+        height="900"
+      />
+      <figcaption class="khh-image-caption">
+        <span class="khh-image-caption-label">Context</span>
+        연구가 향하는 곳은 이런 일상적인 생활공간입니다. 사진은 연구 배경을 보여주는 것으로, 센서가
+        설치된 실증 환경이 아닙니다.
+      </figcaption>
+    </figure>
+  </section>
+)
+
 /* ---------- 연구 모델 개념도 ---------- */
 
 export const ModelDiagram: FC = () => (

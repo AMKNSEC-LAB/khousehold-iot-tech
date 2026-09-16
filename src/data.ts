@@ -282,8 +282,8 @@ export const COLLAB_TOPICS = [
 export const COLLAB_TEXT = {
   title: '생활공간 센싱의 다음 질문을 함께 연구합니다.',
   body: 'KHouseHold는 센서 시스템, 임베디드 구현, 신호처리, 사람 추적, 비접촉 생체·행동 모니터링, 프라이버시 보호, 디지털 트윈과 실제 생활공간 실증을 함께 설계할 대학·연구기관·기업 파트너와의 협력을 열어두고 있습니다.',
-  contactNote: '공식 연락처 입력 필요',
-  contactHint: '공식 이메일 주소가 확정되면 이 영역에서 바로 문의할 수 있습니다.',
+  email: 'khousehold0504@naver.com',
+  contactHint: '협력 제안, 공동 연구, 학생 프로젝트 문의를 이메일로 받고 있습니다.',
 } as const
 
 /* ---------- Footer ---------- */

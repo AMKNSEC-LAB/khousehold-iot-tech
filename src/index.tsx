@@ -13,6 +13,7 @@ import {
   RoadmapSection,
   Collaboration,
   SiteFooter,
+  Toast,
 } from './components'
 
 const app = new Hono()
@@ -39,6 +40,7 @@ app.get('/', (c) => {
         <Collaboration />
       </main>
       <SiteFooter />
+      <Toast />
     </>
   )
 })

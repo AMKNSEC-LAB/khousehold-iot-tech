@@ -376,11 +376,30 @@ export const Collaboration: FC = () => (
       </div>
       <aside class="khh-contact-box" aria-label="연락처">
         <p class="khh-contact-label">Contact</p>
-        <p class="khh-contact-placeholder">{COLLAB_TEXT.contactNote}</p>
+        <a class="khh-contact-email" href={`mailto:${COLLAB_TEXT.email}`}>
+          {COLLAB_TEXT.email}
+        </a>
         <p class="khh-contact-hint">{COLLAB_TEXT.contactHint}</p>
+        <div class="khh-contact-actions">
+          <a
+            class="khh-contact-button"
+            href={`mailto:${COLLAB_TEXT.email}?subject=${encodeURIComponent('[KHouseHold] 연구 협력 문의')}`}
+          >
+            이메일 보내기
+          </a>
+          <button id="copy-email-button" class="khh-contact-button khh-contact-button--ghost" type="button">
+            주소 복사
+          </button>
+        </div>
       </aside>
     </div>
   </Section>
+)
+
+/* ---------- Toast ---------- */
+
+export const Toast: FC = () => (
+  <div id="toast" class="khh-toast" role="status" aria-live="polite"></div>
 )
 
 /* ---------- Footer ---------- */

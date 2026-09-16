@@ -75,4 +75,37 @@
       if (e.target.closest('a')) setMenu(false);
     });
   }
+
+  /* ---------- Toast + email copy ---------- */
+  var toast = document.getElementById('toast');
+  var toastTimer = null;
+
+  function showToast(message) {
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toast.classList.remove('is-show');
+    }, 2400);
+  }
+
+  var copyButton = document.getElementById('copy-email-button');
+  if (copyButton) {
+    copyButton.addEventListener('click', function () {
+      var email = 'khousehold0504@naver.com';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard
+          .writeText(email)
+          .then(function () {
+            showToast('이메일 주소를 복사했습니다.');
+          })
+          .catch(function () {
+            showToast('복사할 수 없습니다. 주소를 직접 선택해 주세요.');
+          });
+      } else {
+        showToast('복사할 수 없습니다. 주소를 직접 선택해 주세요.');
+      }
+    });
+  }
 })();

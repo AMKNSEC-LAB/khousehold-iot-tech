@@ -580,6 +580,36 @@
   color: var(--khh-ink);
 }
 
+.khh-concept-figure {
+  margin: 0 0 44px;
+}
+
+.khh-concept-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--khh-radius);
+  border: 1px solid var(--khh-line-strong);
+}
+
+.khh-concept-caption {
+  margin-top: 14px;
+  max-width: 720px;
+  font-size: 13.5px;
+  line-height: 1.68;
+  color: var(--khh-ink-faint);
+}
+
+.khh-concept-caption-label {
+  display: inline-block;
+  margin-right: 10px;
+  font-family: var(--khh-font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--khh-teal-strong);
+}
+
 .khh-wp-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

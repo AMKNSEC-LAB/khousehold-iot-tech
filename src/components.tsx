@@ -237,6 +237,20 @@ export const CurrentStudy: FC = () => (
       사람의 실제 위치를 일관되게 설명할 수 없습니다. KHouseHold는 시간 정렬, 자세 기반 좌표 변환, 환경별
       거리 변화 분석을 통해 이후 사람 추적과 상태 해석이 의존할 수 있는 측정 기반을 구축하고 있습니다.
     </p>
+    <figure class="khh-concept-figure">
+      <img
+        src="/static/assets/sensor-concept-visualization.jpg"
+        alt="거실 소파 옆 선반에 ToF·IMU 센서 모듈 위치를 표시하고, 소파 좌석 방향으로 멀티존 감지 시야를 청록색 격자로 나타낸 연구 개념 시각화"
+        loading="lazy"
+        width="1920"
+        height="1288"
+      />
+      <figcaption class="khh-concept-caption">
+        <span class="khh-concept-caption-label">Figure 01 · 연구 개념도</span>
+        생활공간에서 ToF·IMU 센서가 배치될 수 있는 위치와 멀티존 감지 시야를 상상해 본 개념
+        시각화입니다. 실제 설치 사례가 아니며, 감지 구역과 배치는 현재 검증 중인 연구 대상입니다.
+      </figcaption>
+    </figure>
     <div class="khh-wp-grid">
       {WORK_PACKAGES.map((wp) => (
         <article class="khh-wp-card">
